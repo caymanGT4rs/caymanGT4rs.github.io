@@ -40,6 +40,7 @@
             margin: 20px auto;
             width: 80%;
             border-radius: 10px;
+            line-height: 1.6;
         }
         p, ul {
             width: 90%;
@@ -82,51 +83,53 @@
     <main>
         <section>
             <h2>Category 1: Software Design & Engineering Enhancements</h2>
-            <p>The artifact I have chosen for the Software Design and Engineering part of the final project is an Android application I developed for the CS-360 course. The application is designed for users to be able to add items to a list that is associated with their login credentials and to be able to add, delete, or modify items to the list. I created this application last fall and was extremely happy with the proof-of-concept design and functionality of the application. 
+            <p>The artifact chosen for the Software Design and Engineering section of my ePortfolio is an Android application I developed for the CS-360 course. This app allows users to create an inventory list tied to their login credentials. Users can add, delete, and modify items within the list. I initially created the application as a proof of concept, and while the basic design and functionality worked, both the code and UI/UX needed refinement.</p>
 
-I selected this artifact for the ePortfolio because of its complexity as well as the number of enhancements I can make to it to show the skills I have learned while being a student at SNHU. Since the application was a functional proof-of-concept app, the code as well as the UI/UX was very rough. However, this allows me to refine the code to be a much smoother experience not only for the user through creating an easier navigable UI and visually pleasing one, but also for any future developers that work on the code through creating concise code blocks and great readability without unnecessary code. This is why I have also selected this artifact for the other components that will be mentioned in the ePortfolio. For the enhancements on this area, I implemented a separate page for registration of a user. Previously, the login and registration used the same text box. This can be confusing for some new users since this is not what many of the other apps use. This separate registration page also adds a security measure by requiring a matching password to ensure that the user has entered the password they want correctly. Also, this new registration page allows for me to separate the login vs registration sequence and reduce unnecessary code. I have also added password visibility toggles for the login as well as the registration page that toggles both the initial password entry, and the password re-entry. This feature allows for the user to have a better experience when entering their password if they feel that they have messed up. I have also changed the “SMS Permissions” button into a “Settings page where the new SMS permissions are now homed.  
+            <p>I selected this artifact because of its complexity and the opportunity for enhancements that showcase the skills I’ve gained at SNHU. The app’s original code and UI were rough, which gave me room to improve both the user experience (UI/UX) and code quality. I’ve streamlined the registration process by implementing a separate page for user registration, instead of using the same text box for login and registration. This separation clarifies the process for users and adds a layer of security by requiring a matching password during registration.</p>
 
-I have met the outcomes that I originally planned for in module one and have the additional outcome of “Developing a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources” with the features regarding the passwords that I implemented. I plan to further achieve this outcome with other enhancements in the future. 
+            <p>Additionally, I added password visibility toggles to both the login and registration pages. This feature helps users verify their password entries, enhancing the overall experience. I also converted the previous “SMS Permissions” button into a “Settings” page, where the new SMS permissions are now managed.</p>
 
-While making the enhancements to the artifact in the Software Design and Engineering category, I learned how to more efficiently set up pages inside of the app to allow for more simplistic pages where users will have the most traffic. Previously, I had the options of registration and settings on the main login page and main display page. This made the previous UI look confusing and would give a bad experience to the user. While implementing the separate pages and adding features such as immediate password validation and visibility toggle, I was able to hide these features to where most users will not need to see it every time they go to use the app. Challenges I faced were figuring out the best way to have the features be implemented in the shortest amount of code. Initially, I was able to get my idea of the features I wanted to implement working great but took up a lot of code which for future development of the app may be inefficient. Since I want to future proof the code as much as possible, I started to remove code so that I could accomplish the same task using shorter code. I was able to have the password re-entry in the same code block as the registration validation while still maintaining good readability and encapsulation which allowed for the relevant code to be all in one spot and not feel crowded. The settings page I have implemented now has room for future buttons that can be stored in that page as well as the log-out button which takes the user to the main page. The current issue with the app now is that the items for each user are not being saved when navigating through the pages. For example, going from DataDisplayActivity to the SettingsActivity page and then back clears the list of items from the inventory list. This should be an easy enough fix that I will work on in the Data Retrieval part of the app. </p>
+            <p>These changes meet my initial project goals and also contribute to an additional outcome: developing a security mindset that anticipates and mitigates vulnerabilities. I plan to continue enhancing this security aspect.</p>
+
+            <p>In the process, I learned to organize app pages more efficiently to improve user flow, such as moving registration and settings off the main login page. This reduces clutter and improves usability. One challenge I faced was optimizing the code for future scalability. Initially, the code was functional but bloated. By refactoring and using shorter, more efficient code, I was able to maintain readability and keep related functionality together.</p>
+
+            <p>However, I’m still encountering an issue with item persistence. Items are not saved when navigating between pages. This is something I plan to fix in the Data Retrieval phase of the app.</p>
         </section>
-        
+
         <section>
             <h2>Category 2: Algorithms & Data Structures Enhancements</h2>
-            <p>The artifact is the same artifact used for the previous enhancement. The artifact I have chosen for the Software Design and Engineering part of the final project is an Android application I developed for the CS-360 course. The application is designed for users to be able to add items to a list that is associated with their login credentials and to be able to add, delete, or modify items to the list. I created this application last fall and was extremely happy with the proof-of-concept design and functionality of the application. For this reason, I have decided to include the application as part of the ePortfolio for this class. The skills I will demonstrate with this enhancement is how I can change the data structure of the current implementation and allow for better functionality without the handoff of worse performance. I plan on improving the data structure and adding a sorting function to allow for the items displayed in the item inventory list to be sorted by item ID and by item Quantity. 
+            <p>For the Algorithms & Data Structures category, I’ll continue working with the same Android application from the previous section. One major improvement I’m implementing is changing the app’s data structure to improve functionality without sacrificing performance.</p>
 
-Before enhancement, the app used the “DataItem.Java” class to put the created item into a Parcel with the fields: Name, Quantity, ID, and put the item parcel into an Array for the item list to display.  
+            <p>Previously, items were stored in an ArrayList, using a custom `DataItem.java` class with fields like Name, Quantity, and ID. Users could manually input their own item IDs, but feedback indicated that this feature wasn’t necessary for most users. Based on this, I removed the option for custom IDs. Instead, the app now assigns IDs sequentially, which simplifies the process and improves performance.</p>
 
-My first enhancement is not major but will improve the performance of this item adding method. I initially had the option for the user to add their item with a preferred ID. After talking to friends that said they would use an app like this, they said that the feature would be one that they would not use. With this input, I removed the feature which is one less thing that needs to be processed. The item is still assigned an ID, however the item ID is now assigned in sequential order, incrementing from the last added item and not by filling in the lowest added number available. For this I moved the UniqueIdGeneration method to the DataDisplayActivity to prevent math moving back and forth between classes. After the maxId is found from the arrayList, it is sent to the AddDataActivity to be used as the nextId. With this, I was able to remove unnecessary code from both the AddDataActivity and the DataDisplayActivity. During the enhancement process, I learned more efficient ways to have array lists reordered in Java by using specific identifiers within the list. The problems I encountered involved the sorting method buttons and keeping the view on the Data Display. 
+            <p>I also optimized the way the app manages item IDs by moving the ID generation logic to the `DataDisplayActivity`. This change removed redundant code and improved efficiency.</p>
 
- 
+            <p>These enhancements help meet the course outcomes, such as:</p>
+            <ul>
+                <li>Designing computing solutions using algorithmic principles and appropriate standards.</li>
+                <li>Demonstrating the ability to apply innovative techniques and tools to deliver value and achieve industry-specific goals.</li>
+            </ul>
 
-The course outcomes that I plan to meet with enhancement include: 
-
-Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices 
-
-Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry- specific goals </p>
+            <p>While working on these improvements, I faced challenges, such as implementing sorting functions for the inventory list and ensuring that the Data Display remained responsive. I’m continuing to refine the sorting features, especially ensuring that users can view the list by item ID or quantity without issues.</p>
         </section>
-        
+
         <section>
             <h2>Category 3: Databases Enhancements</h2>
-            <p>The artifact is the same artifact used for the previous enhancement. The artifact I have chosen for the Software Design and Engineering part of the final project is an Android application I developed for the CS-360 course. The application is designed for users to be able to add items to a list that is associated with their login credentials and to be able to add, delete, or modify items to the list. I created this application last fall and was extremely happy with the proof-of-concept design and functionality of the application. For this reason, I have decided to include the application as part of the ePortfolio for this class. The skills I will demonstrate with this enhancement is how I can convert the storage of data from arrays to be held into a SQL database. Currently, I have a SQL database setup for the login credentials of the users, with a table storing usernames in one column and passwords in the other column. I am wanting to convert the current array storage of the items to database so that I can store the inventory after the app closes as well as eventually link inventories to user ID’s so that each user will be able to have their own stored inventory. I will first add a table to the database labeled “inventory” with columns labeled ID; Name; Quantity, that will hold the inventory items with these data fields. 
+            <p>In this category, I’m focusing on migrating the app’s data storage from arrays to a SQL database. Currently, the app stores user login credentials in a SQL database, with separate columns for usernames and passwords. The next step is to store inventory items in a new table within the database.</p>
 
-Next, I will add the methods for accessing and modifying the table. I’ll need to load data from the table on startup of the application to the main screen of the inventory app. The current add button will need to be linked to a different add method. The same will need to be done for the delete method.  
+            <p>I created an “inventory” table with columns for Item ID, Name, and Quantity. The next steps involve integrating methods for adding, deleting, and modifying items in the database. Additionally, I need to load data from the database when the app starts, so that the inventory list is populated on the main screen.</p>
 
-Testing the enhancements worked well. I incremented the SQL database version integer in the DatabaseHelper class which restarted the onCreate method adding the new table and erasing the old information. I had forgotten that I needed to restart the database to create the table for the inventory items which stumped me for a while, but after reading through my code and seeing the onCreate being under a version number, I tested changing the number to version 2 and everything worked. 
+            <p>While testing the database enhancements, I encountered an issue with creating the new table. I realized I needed to increment the database version to trigger the `onCreate` method. After adjusting the version number, everything worked as expected.</p>
 
-Course outcomes I have accomplished so far include: 
-Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices (data structures and algorithms) 
-
-Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals (software engineering/design/database) 
-
-Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources 
-
-Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision making in the field of computer science </p>
+            <p>These changes support my course outcomes, including:</p>
+            <ul>
+                <li>Designing computing solutions using algorithms, data structures, and standards.</li>
+                <li>Demonstrating innovative techniques in software engineering, design, and database management.</li>
+                <li>Developing a security mindset to anticipate and mitigate vulnerabilities.</li>
+            </ul>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 Cayman Casteel | CS ePortfolio</p>
     </footer>
